@@ -3,7 +3,6 @@ import time
 import torch
 import torch.nn as nn
 import torch.optim as optim
-import matplotlib.pyplot as plt
 from torch.utils.data.dataloader import DataLoader
 
 from model import net
@@ -23,9 +22,6 @@ testloader = DataLoader(testdataset, batch_size=1, shuffle=True)
 
 dataiter = iter(trainloader)
 testdataiter = iter(testloader)
-
-# total_counter = 0
-# epoch_counter = 0
 
 
 def train():

@@ -30,16 +30,8 @@ class MnistDataset(Dataset):
         return img, label
 
     def transform(self):
-        # self.train_in = torch.from_numpy(self.train_in.values)
-        # self.train_out = torch.from_numpy(self.train_out.values)
-        # self.test_in = torch.from_numpy(self.test_in.values)
-        # self.test_out = torch.from_numpy(self.test_out.values)
-
         self.data = torch.from_numpy(self.data.values).type('torch.FloatTensor')
         self.targets = torch.from_numpy(self.targets.values).type('torch.FloatTensor')
-
-        # self.data = torch.from_numpy(self.data).type('torch.FloatTensor')
-        # self.targets = torch.from_numpy(self.targets).type('torch.FloatTensor')
 
     def show_image(self, image):
         pass
